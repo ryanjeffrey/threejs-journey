@@ -27,6 +27,9 @@ scene.add(mesh)
 // Scale
 mesh.scale.set(2, 0.5, 0.5)
 
+// Rotation
+mesh.rotation.set(2, 1, 5)
+
 // Axes helper
 const axesHelper = new THREE.AxesHelper(2)
 scene.add(axesHelper)
