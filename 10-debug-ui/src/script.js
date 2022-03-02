@@ -31,6 +31,8 @@ gui.add(mesh.position, 'x').min(- 3).max(3).step(0.01).name('left/right')
 gui.add(mesh.position, 'y').min(- 3).max(3).step(0.01).name('elevation')
 gui.add(mesh.position, 'z').min(- 3).max(3).step(0.01).name('distance')
 
+gui.add(mesh, "visible");
+
 /**
  * Sizes
  */
