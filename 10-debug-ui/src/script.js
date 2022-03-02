@@ -10,14 +10,20 @@ import GUI from 'lil-gui'
 const gui = new GUI()
 
 const parameters = {
-    color: 0xff0000
+    color: 0xff0000,
+    spin: () => {
+        gsap.to(mesh.rotation, { duration: 1, y: mesh.rotation.y + Math.PI * 2 })
+    }
 }
 
 gui
     .addColor(parameters, 'color')
     .onChange(() => {
         material.color.set(parameters.color)
-    }) 
+    })
+
+gui
+    .add(parameters, 'spin')
 
 /**
  * Base
