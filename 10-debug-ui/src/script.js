@@ -25,6 +25,16 @@ gui
 gui
     .add(parameters, 'spin')
 
+// Show/hide Debug UI when hitting h key
+window.addEventListener('keydown', (event) => {
+    if(event.key === 'h') {
+        if(gui._hidden)
+            gui.show()
+        else
+            gui.hide()
+    }
+})
+
 /**
  * Base
  */
