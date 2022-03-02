@@ -7,7 +7,7 @@ import GUI from 'lil-gui'
 /**
  * Debug
  */
-const gui = new GUI()
+const gui = new GUI({ width: 400 })
 
 const parameters = {
     color: 0xff0000,
