@@ -34,9 +34,10 @@ const torus = new THREE.Mesh(
     new THREE.TorusBufferGeometry(0.3, 0.2, 16, 32),
     material
 )
+torus.position.x = 1.5
 
 
-scene.add(sphere, plane)
+scene.add(sphere, plane, torus)
 
 /**
  * Sizes
