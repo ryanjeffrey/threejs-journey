@@ -16,7 +16,10 @@ const scene = new THREE.Scene()
  */
 const material = new THREE.MeshBasicMaterial()
 
-
+const sphere = new THREE.Mesh(
+    new THREE.SphereBufferGeometry(0.5, 16, 16),
+    material
+)
 
 /**
  * Sizes
