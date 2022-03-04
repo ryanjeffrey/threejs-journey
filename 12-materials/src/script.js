@@ -36,8 +36,9 @@ const material = new THREE.MeshBasicMaterial()
 // material.wireframe = true
 
 // Controlling opacity requires 'transparent = true'
-material.opacity = 0.5
+// material.opacity = 0.5
 material.transparent = true
+material.alphaMap = doorAlphaTexture
 
 // Sphere
 const sphere = new THREE.Mesh(
