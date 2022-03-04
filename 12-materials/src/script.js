@@ -55,6 +55,7 @@ const scene = new THREE.Scene()
 
 const material = new THREE.MeshPhongMaterial()
 material.shininess = 100
+material.specular = new THREE.Color(0x1188ff)
 
 
 // Sphere
