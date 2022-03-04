@@ -45,8 +45,12 @@ const scene = new THREE.Scene()
 // material.wireframe = true
 // material.flatShading = true
 
-const material = new THREE.MeshMatcapMaterial()
-material.matcap = matcapTexture
+// const material = new THREE.MeshMatcapMaterial()
+// material.matcap = matcapTexture
+
+// Objects get whiter as camera gets closer
+const material = new THREE.MeshDepthMaterial()
+
 
 // Sphere
 const sphere = new THREE.Mesh(
