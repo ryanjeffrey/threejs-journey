@@ -54,7 +54,7 @@ const scene = new THREE.Scene()
 // const material = new THREE.MeshLambertMaterial()
 
 const material = new THREE.MeshPhongMaterial()
-
+material.shininess = 100
 
 
 // Sphere
