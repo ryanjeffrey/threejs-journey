@@ -12,6 +12,13 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 /**
+ * Objects
+ */
+const material = new THREE.MeshBasicMaterial()
+
+
+
+/**
  * Sizes
  */
 const sizes = {
