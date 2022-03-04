@@ -51,7 +51,9 @@ const scene = new THREE.Scene()
 // // Objects get whiter as camera gets closer
 // const material = new THREE.MeshDepthMaterial()
 
-const material = new THREE.MeshLambertMaterial()
+// const material = new THREE.MeshLambertMaterial()
+
+const material = new THREE.MeshPhongMaterial()
 
 
 
