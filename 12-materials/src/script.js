@@ -31,14 +31,15 @@ const scene = new THREE.Scene()
  * Objects
  */
 const material = new THREE.MeshBasicMaterial()
-// material.map = doorColorTexture
+material.map = doorColorTexture
 // material.color = new THREE.Color('green')
 // material.wireframe = true
 
 // Controlling opacity requires 'transparent = true'
 // material.opacity = 0.5
 material.transparent = true
-material.alphaMap = doorAlphaTexture
+// material.alphaMap = doorAlphaTexture
+material.side = THREE.DoubleSide
 
 // Sphere
 const sphere = new THREE.Mesh(
