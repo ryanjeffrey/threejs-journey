@@ -33,7 +33,11 @@ const scene = new THREE.Scene()
 const material = new THREE.MeshBasicMaterial()
 // material.map = doorColorTexture
 // material.color = new THREE.Color('green')
-material.wireframe = true
+// material.wireframe = true
+
+// Controlling opacity requires 'transparent = true'
+material.opacity = 0.5
+material.transparent = true
 
 // Sphere
 const sphere = new THREE.Mesh(
