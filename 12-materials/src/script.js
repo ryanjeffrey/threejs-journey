@@ -6,7 +6,7 @@ import GUI from "lil-gui";
 /**
  * Debug UI
  */
-const gui = new GUI();
+const gui = new GUI()
 
 /**
  * Textures
@@ -73,6 +73,9 @@ const scene = new THREE.Scene()
 const material = new THREE.MeshStandardMaterial()
 material.metalness = 0.45
 material.roughness = 0.65
+
+gui.add(material, 'metalness').min(0).max(1).step(0.0001)
+gui.add(material, 'roughness').min(0).max(1).step(0.0001)
 
 // Sphere
 const sphere = new THREE.Mesh(
