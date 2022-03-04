@@ -26,7 +26,7 @@ const plane = new THREE.Mesh(
     material
 )
 
-scene.add(sphere)
+scene.add(sphere, plane)
 
 /**
  * Sizes
