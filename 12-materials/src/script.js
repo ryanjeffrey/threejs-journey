@@ -65,6 +65,8 @@ const scene = new THREE.Scene()
 // material.gradientMap = gradientTexture
 
 const material = new THREE.MeshStandardMaterial()
+material.metalness = 0.45
+material.roughness = 0.65
 
 // Sphere
 const sphere = new THREE.Mesh(
