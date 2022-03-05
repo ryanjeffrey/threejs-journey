@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 
 /**
  * Base
@@ -28,7 +29,7 @@ const fontLoader = new FontLoader()
 
 fontLoader.load(
     '/fonts/helvetiker_regular.typeface.json', () => {
-        console.log('font loaded')
+        const textGeometry = new TextGeometry()
     }
 )
 
