@@ -56,6 +56,8 @@ const plane = new THREE.Mesh(
 plane.rotation.x = - Math.PI * 0.5
 plane.position.y = - 0.5
 
+plane.receiveShadow = true
+
 scene.add(sphere, plane)
 
 /**
