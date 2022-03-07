@@ -8,6 +8,7 @@ import * as dat from 'lil-gui'
  */
 const textureLoader = new THREE.TextureLoader()
 const bakedShadow = textureLoader.load('/textures/bakedShadow.jpg')
+const simpleShadow = textureLoader.load('/textures/simpleShadow.jpg')
 
 /**
  * Base
@@ -107,9 +108,7 @@ sphere.castShadow = true
 
 const plane = new THREE.Mesh(
     new THREE.PlaneGeometry(5, 5),
-    new THREE.MeshBasicMaterial({ 
-        map: bakedShadow
-    })
+    material
 )
 plane.rotation.x = - Math.PI * 0.5
 plane.position.y = - 0.5
@@ -117,6 +116,20 @@ plane.position.y = - 0.5
 plane.receiveShadow = true
 
 scene.add(sphere, plane)
+
+// Plane that sits slightly above floor
+const sphereShadow = new THREE.Mesh(
+    new THREE.PlaneBufferGeometry(1.5, 1.5),
+    new THREE.MeshBasicMaterial({
+        color: 0x000000,
+        transparent: true,
+        alphaMap: simpleShadow
+    })
+)
+sphereShadow.rotation.x = - Math.PI * 0.5
+sphereShadow.position.y = plane.position.y + 0.01
+
+scene.add(sphere, sphereShadow, plane)
 
 /**
  * Sizes
