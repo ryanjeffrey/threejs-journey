@@ -189,6 +189,11 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
+    // Update the sphere
+    sphere.position.x = Math.cos(elapsedTime) * 1.5
+    sphere.position.z = Math.sin(elapsedTime) * 1.5
+    sphere.position.y = Math.abs(Math.sin(elapsedTime * 3))
+
     // Update controls
     controls.update()
 
