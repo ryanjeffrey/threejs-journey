@@ -192,7 +192,13 @@ const tick = () =>
     // Update the sphere
     sphere.position.x = Math.cos(elapsedTime) * 1.5
     sphere.position.z = Math.sin(elapsedTime) * 1.5
+    // Math.abs is used to force the value positive so the sphere doesn't bounce through the floor (plane)
     sphere.position.y = Math.abs(Math.sin(elapsedTime * 3))
+
+    // Update the shadow
+    sphereShadow.position.x = sphere.position.x
+    sphereShadow.position.z = sphere.position.z
+    sphereShadow.material.opacity = (1 - Math.abs(sphere.position.y)) * 0.3
 
     // Update controls
     controls.update()
