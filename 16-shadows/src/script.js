@@ -47,6 +47,7 @@ const sphere = new THREE.Mesh(
     new THREE.SphereGeometry(0.5, 32, 32),
     material
 )
+sphere.castShadow = true
 
 const plane = new THREE.Mesh(
     new THREE.PlaneGeometry(5, 5),
