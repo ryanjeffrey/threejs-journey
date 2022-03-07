@@ -79,6 +79,7 @@ pointLight.position.set(- 1, 1, 0)
 scene.add(pointLight)
 
 const pointLightCameraHelper = new THREE.CameraHelper(pointLight.shadow.camera)
+pointLightCameraHelper.visible = false
 scene.add(pointLightCameraHelper)
 
 /**
