@@ -18,7 +18,8 @@ const scene = new THREE.Scene()
 /**
  * Lights
  */
-
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+scene.add(ambientLight)
 
 /**
  * Objects
