@@ -156,6 +156,9 @@ for(let i = 0; i < 50; i++){
     grave.rotation.y = (Math.random() - 0.5) * 0.4
     grave.rotation.z = (Math.random() - 0.5) * 0.4
 
+    // Shadow
+    grave.castShadow = true
+
     // Add to the graves container
     graves.add(grave)
 }
@@ -252,6 +255,25 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.setClearColor('#262837')
+
+/**
+ * Shadows
+ */
+renderer.shadowMap.enabled = true
+
+moonLight.castShadow = true
+doorLight.castShadow = true
+ghost1.castShadow = true
+ghost2.castShadow = true
+ghost3.castShadow = true
+
+walls.castShadow = true
+bush1.castShadow = true
+bush2.castShadow = true
+bush3.castShadow = true
+bush4.castShadow = true
+
+floor.receiveShadow = true
 
 /**
  * Animate
