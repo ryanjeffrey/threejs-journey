@@ -71,6 +71,7 @@ const door = new THREE.Mesh(
         roughnessMap: doorRoughnessTexture
      })
 )
+door.geometry.setAttribute('uv2', new THREE.Float32BufferAttribute(door.geometry.attributes.uv.array, 2))
 door.position.y = 1
 door.position.z = 2 + 0.01
 house.add(door)
