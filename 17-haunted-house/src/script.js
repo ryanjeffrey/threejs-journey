@@ -82,6 +82,27 @@ scene.add(graves)
 const graveGeometry = new THREE.BoxBufferGeometry(0.6, 0.8, 0.2)
 const graveMaterial = new THREE.MeshStandardMaterial({ color: '#b2b6b1' })
 
+// Creating a radius so the graves don't go in the house
+for(let i = 0; i < 50; i++){
+    const angle = Math.random() * Math.PI * 2 // Random angle
+    const radius = 3 + Math.random() * 6      // Random radius
+    const x = Math.cos(angle) * radius        // Get the x position using cosine
+    const z = Math.sin(angle) * radius        // Get the z position using sine
+
+    // Create the mesh
+    const grave = new THREE.Mesh(graveGeometry, graveMaterial)
+
+    // Position
+    grave.position.set(x, 0.3, z)
+
+    // Rotation
+    grave.rotation.y = (Math.random() - 0.5) * 0.4
+    grave.rotation.z = (Math.random() - 0.5) * 0.4
+
+    // Add to the graves container
+    graves.add(grave)
+}
+
 // Floor
 const floor = new THREE.Mesh(
     new THREE.PlaneGeometry(20, 20),
