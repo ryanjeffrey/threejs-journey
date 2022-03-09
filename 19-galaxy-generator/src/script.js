@@ -22,6 +22,7 @@ const parameters = {}
 parameters.count = 100000
 parameters.size = 0.01
 parameters.radius = 5
+parameters.branches = 3
 
 let geometry = null
 let material = null
@@ -79,6 +80,7 @@ generateGalaxy()
 gui.add(parameters, 'count').min(100).max(1000000).step(100).onFinishChange(generateGalaxy)
 gui.add(parameters, 'size').min(0.001).max(0.1).step(0.001).onFinishChange(generateGalaxy)
 gui.add(parameters, 'radius').min(0.01).max(20).step(0.01).onFinishChange(generateGalaxy)
+gui.add(parameters, 'branches').min(2).max(20).step(1).onFinishChange(generateGalaxy)
 
 /**
  * Sizes
