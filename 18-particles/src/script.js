@@ -44,7 +44,7 @@ particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.1,
     sizeAttenuation: true,
-    color: '#ff88cc',
+    // color: '#ff88cc',
     alphaMap: particleTexture,
     transparent: true,
     // alphaTest: 0.001,
