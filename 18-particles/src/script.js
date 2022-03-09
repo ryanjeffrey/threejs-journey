@@ -27,7 +27,7 @@ const particleTexture = textureLoader.load('/textures/particles/9.png')
  */
 // Geometry
 const particlesGeometry = new THREE.BufferGeometry()
-const count = 50000
+const count = 20000
 
 const positions = new Float32Array(count * 3)
 
