@@ -18,6 +18,8 @@ const scene = new THREE.Scene()
 /**
  * Galaxy
  */
+const parameters = {}
+
 const generateGalaxy = () => {
 
 }
