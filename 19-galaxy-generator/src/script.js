@@ -26,6 +26,7 @@ parameters.branches = 3
 parameters.spin = 1
 parameters.randomness = 0.2
 parameters.randomnessPower = 3
+parameters.insideColor = '#ff6030'
 
 let geometry = null
 let material = null
@@ -94,6 +95,7 @@ gui.add(parameters, 'branches').min(2).max(20).step(1).onFinishChange(generateGa
 gui.add(parameters, 'spin').min(- 5).max(5).step(0.001).onFinishChange(generateGalaxy)
 gui.add(parameters, 'randomness').min(0).max(2).step(0.001).onFinishChange(generateGalaxy)
 gui.add(parameters, 'randomnessPower').min(1).max(10).step(0.001).onFinishChange(generateGalaxy)
+gui.addColor(parameters, 'insideColor').onFinishChange(generateGalaxy)
 
 /**
  * Sizes
