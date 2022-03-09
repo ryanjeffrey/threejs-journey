@@ -42,7 +42,8 @@ const particlesMaterial = new THREE.PointsMaterial({
     size: 0.1,
     sizeAttenuation: true,
     color: '#ff88cc',
-    map: particleTexture
+    alphaMap: particleTexture,
+    transparent: true
 })
 
 
