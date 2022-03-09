@@ -44,7 +44,8 @@ const particlesMaterial = new THREE.PointsMaterial({
     color: '#ff88cc',
     alphaMap: particleTexture,
     transparent: true,
-    alphaTest: 0.001
+    // alphaTest: 0.001,
+    depthTest: false
 })
 
 
