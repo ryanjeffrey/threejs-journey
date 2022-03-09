@@ -49,6 +49,7 @@ const generateGalaxy = () => {
     geometry = new THREE.BufferGeometry()
 
     const positions = new Float32Array(parameters.count * 3)
+    const colors = new Float32Array(parameters.count * 3)
 
     for(let i = 0; i < parameters.count; i++) {
         const i3 = i * 3
@@ -62,12 +63,19 @@ const generateGalaxy = () => {
         const randomY = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : - 1) * parameters.randomness * radius
         const randomZ = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : - 1) * parameters.randomness * radius
 
+        // Positions
         positions[i3] = Math.cos(branchAngle + spinAngle) * radius + randomX          // [i3 + 0] = x
         positions[i3 + 1] = randomY                                                   // [i3 + 1] = y
         positions[i3 + 2] = Math.sin(branchAngle + spinAngle) * radius + randomZ      // [i3 + 2] = z
+
+        // Color
+        colors[i3] = 1
+        colors[i3 + 1] = 0
+        colors[i3 + 2] = 0
     }
 
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 
     /**
     * Material
