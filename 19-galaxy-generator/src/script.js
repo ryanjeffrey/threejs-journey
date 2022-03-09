@@ -19,8 +19,8 @@ const scene = new THREE.Scene()
  * Galaxy
  */
 const parameters = {}
-parameters.count = 1000
-parameters.size = 0.02
+parameters.count = 100000
+parameters.size = 0.01
 
 let geometry = null
 let material = null
@@ -35,7 +35,7 @@ const generateGalaxy = () => {
         material.dispose()
         scene.remove(points)
     }
-    
+
     /**
     * Geometry
     */
