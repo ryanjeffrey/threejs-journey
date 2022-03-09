@@ -16,6 +16,15 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 /**
+ * Galaxy
+ */
+const generateGalaxy = () => {
+
+}
+
+generateGalaxy()
+
+/**
  * Sizes
  */
 const sizes = {
