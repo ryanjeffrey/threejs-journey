@@ -2,6 +2,7 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
+import { Color } from 'three'
 
 /**
  * Base
@@ -38,7 +39,8 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
     size: 0.1,
-    sizeAttenuation: true
+    sizeAttenuation: true,
+    color: '#ff88cc'
 })
 
 // Points
