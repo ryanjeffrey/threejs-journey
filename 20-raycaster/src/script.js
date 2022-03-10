@@ -48,6 +48,15 @@ rayDirection.normalize()
 
 raycaster.set(rayOrigin, rayDirection)
 
+// Check the intersection of a single object
+const intersect = raycaster.intersectObject(object2)
+console.log(intersect)
+
+// Check the intersection of multiple objects
+const intersects = raycaster.intersectObjects([object1, object2, object3])
+console.log(intersects)
+
+
 /**
  * Sizes
  */
