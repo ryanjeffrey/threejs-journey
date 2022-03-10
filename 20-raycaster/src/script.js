@@ -76,11 +76,21 @@ window.addEventListener('mousemove', (event) => {
     mouse.y = - (event.clientY / sizes.height) * 2 + 1
 })
 
-window.addEventListener('click', (event) => {
+window.addEventListener('click', () => {
     if(currentIntersect){
-        console.log('click on a sphere')
+        switch(currentIntersect.object){
+            case object1:
+                console.log('click on object 1')
+                break
+            case object2:
+                console.log('click on object 2')
+                break
+            case object3:
+                console.log('click on object 3')
+        }
     }
 })
+       
 
 /**
  * Camera
