@@ -108,6 +108,9 @@ const tick = () =>
 
     raycaster.set(rayOrigin, rayDirection)
 
+    const objectsToTest = [object1, object2, object3]
+    const intersects = raycaster.intersectObjects(objectsToTest)
+
     // Update controls
     controls.update()
 
