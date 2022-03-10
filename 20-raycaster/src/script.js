@@ -42,20 +42,6 @@ scene.add(object1, object2, object3)
  */
 const raycaster = new THREE.Raycaster()
 
-const rayOrigin = new THREE.Vector3(- 3, 0, 0)
-const rayDirection = new THREE.Vector3(10, 0, 0)
-rayDirection.normalize()
-
-raycaster.set(rayOrigin, rayDirection)
-
-// Check the intersection of a single object
-const intersect = raycaster.intersectObject(object2)
-console.log(intersect)
-
-// Check the intersection of multiple objects
-const intersects = raycaster.intersectObjects([object1, object2, object3])
-console.log(intersects)
-
 
 /**
  * Sizes
@@ -109,6 +95,11 @@ const clock = new THREE.Clock()
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
+
+    // Animate objects
+    object1.position.y = Math.sin(elapsedTime * 0.3) * 1.5
+    object2.position.y = Math.sin(elapsedTime * 0.8) * 1.5
+    object3.position.y = Math.sin(elapsedTime * 1.4) * 1.5
 
     // Update controls
     controls.update()
