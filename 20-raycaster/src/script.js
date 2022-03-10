@@ -126,6 +126,20 @@ const tick = () =>
         intersect.object.material.color.set('#0000ff')
     }
 
+    if(intersects.length){
+        if(!currentIntersect){
+            console.log('mouse enter')
+        }
+
+        currentIntersect = intersects[0]
+    }
+    else {
+        if(!currentIntersect){
+            console.log('mouse leave')
+        }
+        currentIntersect = null
+    }
+
     // Update controls
     controls.update()
 
