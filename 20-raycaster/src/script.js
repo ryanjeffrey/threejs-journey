@@ -87,6 +87,7 @@ window.addEventListener('click', () => {
                 break
             case object3:
                 console.log('click on object 3')
+                break
         }
     }
 })
