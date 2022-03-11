@@ -122,6 +122,12 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
+    // Animate meshes
+    for(const mesh of sectionMeshes){
+        mesh.rotation.x = elapsedTime * 0.1
+        mesh.rotation.y = elapsedTime * 0.12
+    }
+
     // Render
     renderer.render(scene, camera)
 
