@@ -41,6 +41,7 @@ const material = new THREE.MeshToonMaterial({
 })
 
 // Meshes
+const objectsDistance = 2
 const mesh1 = new THREE.Mesh(
     new THREE.TorusGeometry(1, 0.4, 16, 60),
     material
