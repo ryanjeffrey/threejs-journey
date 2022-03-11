@@ -13,6 +13,9 @@ const parameters = {
 
 gui
     .addColor(parameters, 'materialColor')
+    .onChange(() => {
+        material.color.set(parameters.materialColor)
+    })
 
 /**
  * Base
