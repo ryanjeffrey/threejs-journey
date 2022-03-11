@@ -114,6 +114,11 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
+ * Scroll
+ */
+let scrollY = window.scrollY
+
+/**
  * Animate
  */
 const clock = new THREE.Clock()
