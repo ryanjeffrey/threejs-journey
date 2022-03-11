@@ -63,6 +63,8 @@ mesh3.position.y = - objectsDistance * 2
 
 scene.add(mesh1, mesh2, mesh3)
 
+const sectionMeshes = [ mesh1, mesh2, mesh3 ]
+
 /**
  * Lights
  */
