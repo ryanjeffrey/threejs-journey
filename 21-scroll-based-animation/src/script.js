@@ -118,6 +118,11 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
  */
 let scrollY = window.scrollY
 
+window.addEventListener('scroll', () => {
+    scrollY = window.scrollY
+    console.log(scrollY)
+})
+
 /**
  * Animate
  */
