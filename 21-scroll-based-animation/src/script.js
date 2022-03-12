@@ -133,6 +133,13 @@ const cursor = {}
 cursor.x = 0
 cursor.y = 0
 
+window.addEventListener('mousemove', (event) => {
+    cursor.x = event.clientX
+    cursor.y = event.clientY
+
+    console.log(cursor)
+})
+
 /**
  * Animate
  */
