@@ -127,6 +127,13 @@ window.addEventListener('scroll', () => {
 })
 
 /**
+ * Cursor
+ */
+const cursor = {}
+cursor.x = 0
+cursor.y = 0
+
+/**
  * Animate
  */
 const clock = new THREE.Clock()
