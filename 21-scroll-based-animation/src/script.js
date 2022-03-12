@@ -146,6 +146,7 @@ window.addEventListener('mousemove', (event) => {
  * Animate
  */
 const clock = new THREE.Clock()
+let previousTime = 0
 
 const tick = () =>
 {
