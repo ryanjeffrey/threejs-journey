@@ -70,6 +70,13 @@ scene.add(mesh1, mesh2, mesh3)
 const sectionMeshes = [ mesh1, mesh2, mesh3 ]
 
 /**
+ * Particles
+ */
+// Geometry
+const particlesCount = 200
+const positions = new Float32Array(particlesCount * 3)
+
+/**
  * Lights
  */
 const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
