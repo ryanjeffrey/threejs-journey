@@ -160,7 +160,11 @@ window.addEventListener('scroll', () => {
 
     const newSection = Math.round(scrollY / sizes.height)
 
-    console.log(newSection)
+    if(newSection != currentSection) {
+        currentSection = newSection
+        console.log('changed', currentSection)
+    }
+    
 })
 
 /**
