@@ -157,6 +157,10 @@ let currentSection = 0
 
 window.addEventListener('scroll', () => {
     scrollY = window.scrollY
+
+    const newSection = Math.round(scrollY / sizes.height)
+
+    console.log(newSection)
 })
 
 /**
