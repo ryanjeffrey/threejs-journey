@@ -82,6 +82,9 @@ for(let i = 0; i < particlesCount; i++) {
     positions[i * 3 + 2] = Math.random()        // z
 }
 
+const particlesGeometry = new THREE.BufferGeometry()
+particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+
 /**
  * Lights
  */
