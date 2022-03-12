@@ -92,6 +92,10 @@ const particlesMaterial = new THREE.PointsMaterial({
     size: 0.03
  })
 
+ // Points
+ const particles = new THREE.Points(particlesGeometry, particlesMaterial)
+ scene.add(particles)
+
 /**
  * Lights
  */
