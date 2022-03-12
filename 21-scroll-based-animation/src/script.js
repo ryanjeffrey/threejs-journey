@@ -162,7 +162,6 @@ window.addEventListener('scroll', () => {
 
     if(newSection != currentSection) {
         currentSection = newSection
-        console.log('changed', currentSection)
     }
     
 })
