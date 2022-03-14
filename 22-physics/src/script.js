@@ -195,6 +195,10 @@ const tick = () =>
     // Update physics world
     world.step(1 / 60, deltaTime, 3)
 
+    for(const object of objectsToUpdate) {
+        object.mesh.position.copy(object.body.position)
+    }
+
     // Update controls
     controls.update()
 
