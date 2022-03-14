@@ -8,6 +8,7 @@ import CANNON from 'cannon'
  * Debug
  */
 const gui = new dat.GUI()
+const debugObject = {}
 
 /**
  * Base
