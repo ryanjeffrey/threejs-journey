@@ -47,6 +47,7 @@ const sphereBody = new CANNON.Body({
     position: new CANNON.Vec3(0, 3, 0),
     shape: sphereShape
 })
+world.addBody(sphereBody)
 
 /**
  * Test sphere
