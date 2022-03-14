@@ -20,7 +20,22 @@ debugObject.createSphere = () => {
         }
     )
 }
+
+debugObject.createBox = () => {
+    createBox(
+        Math.random(),
+        Math.random(),
+        Math.random(),
+        { 
+            x: (Math.random() - 0.5) * 3, 
+            y: 3, 
+            z: (Math.random() - 0.5) * 3 
+        }
+    )
+}
+
 gui.add(debugObject, 'createSphere')
+gui.add(debugObject, 'createBox')
 
 /**
  * Base
@@ -193,14 +208,15 @@ const createSphere = (radius, position) => {
     })
 }
 
-createSphere(0.5, { x: 0, y: 3, z: 0 })
+// createSphere(0.5, { x: 0, y: 3, z: 0 })
 
 // Box
 const boxGeometry = new THREE.BoxBufferGeometry(1, 1, 1)
 const boxMaterial = new THREE.MeshStandardMaterial({
     metalness: 0.3,
     roughness: 0.4,
-    envMap: environmentMapTexture
+    envMap: environmentMapTexture,
+    envMapIntensity: 0.5
 })
 
 const createBox = (width, height, depth, position) => {
