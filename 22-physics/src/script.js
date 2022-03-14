@@ -47,6 +47,15 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 /**
+ * Sounds
+ */
+const hitSound = new Audio('/sounds/hit.mp3')
+
+const playHitSound = () => {
+    hitSound.play()
+}
+
+/**
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
