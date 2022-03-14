@@ -141,6 +141,13 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
+ * Utils
+ */
+const createSphere = (radius, position) => {
+    
+}
+
+/**
  * Animate
  */
 const clock = new THREE.Clock()
