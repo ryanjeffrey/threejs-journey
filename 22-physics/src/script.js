@@ -51,9 +51,13 @@ const scene = new THREE.Scene()
  */
 const hitSound = new Audio('/sounds/hit.mp3')
 
-const playHitSound = () => {
-    hitSound.currentTime = 0
-    hitSound.play()
+const playHitSound = (collision) => {
+    const impactStrength = collision.contact.getImpactVelocityAlongNormal()
+
+    if(impactStrength > 1.5) {
+        hitSound.currentTime = 0
+        hitSound.play()
+    }
 }
 
 /**
