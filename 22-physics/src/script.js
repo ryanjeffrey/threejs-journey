@@ -10,6 +10,10 @@ import CANNON from 'cannon'
 const gui = new dat.GUI()
 const debugObject = {}
 
+debugObject.createSphere = () => {
+    createSphere(0.5, { x: 0, y: 3, z:0 })
+}
+
 /**
  * Base
  */
