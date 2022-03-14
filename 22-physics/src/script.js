@@ -49,6 +49,13 @@ const sphereBody = new CANNON.Body({
 })
 world.addBody(sphereBody)
 
+// Floor
+const floorShape = new CANNON.Plane()
+const floorBody = new CANNON.Body()
+floorBody.mass = 0
+floorBody.addShape(floorShape)
+world.addBody(floorBody)
+
 /**
  * Test sphere
  */
