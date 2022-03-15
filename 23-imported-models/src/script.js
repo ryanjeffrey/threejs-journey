@@ -24,13 +24,7 @@ const gltfloader = new GLTFLoader()
 gltfloader.load(
     '/models/FlightHelmet/glTF/FlightHelmet.gltf',
     (gltf) => {
-        
-        // Duplicate the children array
-        const children = [...gltf.scene.children]
-
-        for(const child of children) {
-            scene.add(child)
-        }
+        scene.add(gltf.scene)
     }
 )
 
