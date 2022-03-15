@@ -29,6 +29,8 @@ gltfLoader.setDRACOLoader(dracoLoader)
 gltfLoader.load(
     '/models/Fox/glTF/Fox.gltf',
     (gltf) => {
+        const mixer = new THREE.AnimationMixer(gltf.scene)
+
         gltf.scene.scale.set(0.025, 0.025, 0.025)
         scene.add(gltf.scene)
     }
