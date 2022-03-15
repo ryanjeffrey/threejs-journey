@@ -23,10 +23,10 @@ const scene = new THREE.Scene()
 const dracoLoader = new DRACOLoader()
 dracoLoader.setDecoderPath('/draco/')
 
-const gltfloader = new GLTFLoader()
-gltfloader.setDRACOLoader(dracoLoader)
+const gltfLoader = new GLTFLoader()
+gltfLoader.setDRACOLoader(dracoLoader)
 
-gltfloader.load(
+gltfLoader.load(
     '/models/Duck/glTF-Draco/Duck.gltf',
     (gltf) => {
         scene.add(gltf.scene)
