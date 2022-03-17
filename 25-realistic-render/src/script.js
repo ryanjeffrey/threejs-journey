@@ -15,6 +15,7 @@ const cubeTextureLoader = new THREE.CubeTextureLoader()
  */
 // Debug
 const gui = new dat.GUI()
+const debugObject = {}
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -47,6 +48,8 @@ const environmentMap = cubeTextureLoader.load([
 ])
 scene.background = environmentMap
 
+debugObject.envMapIntensity = 2.5
+gui.add(debugObject, 'envMapIntensity').min(0).max(10).step(0.001)
 /**
  * Models
  */
