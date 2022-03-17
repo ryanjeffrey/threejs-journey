@@ -31,6 +31,17 @@ const testSphere = new THREE.Mesh(
 scene.add(testSphere)
 
 /**
+ * Models
+ */
+gltfLoader.load(
+    '/models/FlightHelmet/glTF/FlightHelmet.gltf',
+    (gltf) => {
+        console.log('success')
+        console.log(gltf)
+    }
+)
+
+/**
  * Lights
  */
 const directionalLight = new THREE.DirectionalLight('#ffffff', 3)
