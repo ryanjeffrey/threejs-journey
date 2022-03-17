@@ -30,6 +30,8 @@ const updateAllMaterials = () => {
     scene.traverse((child) => {
         if(child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial){
             child.material.envMapIntensity = debugObject.envMapIntensity
+            child.castShadow = true
+            child.receiveShadow = true
         }
     })
 }
