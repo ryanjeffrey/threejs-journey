@@ -27,7 +27,7 @@ scene.add(testSphere)
 /**
  * Lights
  */
-const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
+const directionalLight = new THREE.DirectionalLight('#ffffff', 3)
 directionalLight.position.set(0.25, 3, - 2.25)
 scene.add(directionalLight)
 
