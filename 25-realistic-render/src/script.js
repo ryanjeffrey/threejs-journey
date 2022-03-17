@@ -23,6 +23,15 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 /**
+ * Update all materials
+ */
+const updateAllMaterials = () => {
+    scene.traverse((child) => {
+        console.log(child)
+    })
+}
+
+/**
  * Environment map
  */
 const environmentMap = cubeTextureLoader.load([
