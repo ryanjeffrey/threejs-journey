@@ -31,6 +31,12 @@ const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
 directionalLight.position.set(0.25, 3, - 2.25)
 scene.add(directionalLight)
 
+// Debug UI
+gui.add(directionalLight, 'intensity').min(0).max(10).step(0.001).name('lightIntensity')
+gui.add(directionalLight.position, 'x').min(- 5).max(5).step(0.001).name('lightX')
+gui.add(directionalLight.position, 'y').min(- 5).max(5).step(0.001).name('lightY')
+gui.add(directionalLight.position, 'z').min(- 5).max(5).step(0.001).name('lightZ')
+
 /**
  * Sizes
  */
