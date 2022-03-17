@@ -36,8 +36,7 @@ scene.add(testSphere)
 gltfLoader.load(
     '/models/FlightHelmet/glTF/FlightHelmet.gltf',
     (gltf) => {
-        console.log('success')
-        console.log(gltf)
+        scene.add(gltf.scene)
     }
 )
 
