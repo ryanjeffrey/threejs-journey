@@ -28,7 +28,7 @@ const scene = new THREE.Scene()
 const updateAllMaterials = () => {
     scene.traverse((child) => {
         if(child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial){
-            console.log(child)
+            child.material.envMap = environmentMap
         }
     })
 }
