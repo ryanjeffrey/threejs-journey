@@ -30,7 +30,7 @@ const updateAllMaterials = () => {
     scene.traverse((child) => {
         if(child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial){
             child.material.envMap = environmentMap
-            child.material.envMapIntensity = 2.5
+            child.material.envMapIntensity = debugObject.envMapIntensity
         }
     })
 }
@@ -49,7 +49,8 @@ const environmentMap = cubeTextureLoader.load([
 scene.background = environmentMap
 
 debugObject.envMapIntensity = 2.5
-gui.add(debugObject, 'envMapIntensity').min(0).max(10).step(0.001)
+gui.add(debugObject, 'envMapIntensity').min(0).max(10).step(0.001).onChange(updateAllMaterials)
+
 /**
  * Models
  */
