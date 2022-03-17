@@ -25,6 +25,13 @@ const testSphere = new THREE.Mesh(
 scene.add(testSphere)
 
 /**
+ * Lights
+ */
+const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
+directionalLight.position.set(0.25, 3, - 2.25)
+scene.add(directionalLight)
+
+/**
  * Sizes
  */
 const sizes = {
