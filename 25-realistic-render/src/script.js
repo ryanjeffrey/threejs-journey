@@ -139,6 +139,8 @@ gui.add(renderer, 'toneMapping', {
     ACESFilmic: THREE.ACESFilmicToneMapping
 })
 
+gui.add(renderer, 'toneMappingExposure').min(0).max(10).step(0.001)
+
 /**
  * Animate
  */
