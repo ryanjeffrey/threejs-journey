@@ -74,6 +74,7 @@ gltfLoader.load(
  */
 const directionalLight = new THREE.DirectionalLight('#ffffff', 3)
 directionalLight.position.set(0.25, 3, - 2.25)
+directionalLight.castShadow = true
 scene.add(directionalLight)
 
 // Debug UI
