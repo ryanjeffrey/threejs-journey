@@ -33,6 +33,7 @@ const environmentMap = cubeTextureLoader.load([
     '/textures/environmentMaps/0/pz.jpg',
     '/textures/environmentMaps/0/nz.jpg'
 ])
+scene.background = environmentMap
 
 /**
  * Models
