@@ -1,8 +1,9 @@
 export default class Experience {
-    constructor() {
+    constructor(canvas) {
         // Global access
         window.experience = this
-        
-        console.log('Here begins a great experience')
+
+        // Options
+        this.canvas = canvas
     }
 }
