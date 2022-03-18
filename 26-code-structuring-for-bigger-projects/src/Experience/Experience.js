@@ -12,7 +12,11 @@ export default class Experience {
         this.sizes = new Sizes()
 
         this.sizes.on('resize', () => {
-            console.log('I heard a resize')
+            this.resize()
         })
+    }
+
+    resize() {
+        
     }
 }
