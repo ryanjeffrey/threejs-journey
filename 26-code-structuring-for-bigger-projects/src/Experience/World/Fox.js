@@ -46,6 +46,10 @@ export default class Fox {
 
         this.animation.actions.current = this.animation.actions.survey
         this.animation.actions.current.play()
+
+        this.animation.play = (name) => {
+            
+        }
     }
 
     update() {
