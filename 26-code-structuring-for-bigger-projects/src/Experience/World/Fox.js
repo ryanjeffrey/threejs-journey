@@ -48,7 +48,8 @@ export default class Fox {
         this.animation.actions.current.play()
 
         this.animation.play = (name) => {
-            
+            const newAction = this.animation.actions[name]
+            const oldAction = this.animation.actions.current
         }
     }
 
