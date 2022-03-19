@@ -7,6 +7,12 @@ export default class Fox {
         this.scene = this.experience.scene
         this.resources = this.experience.resources
         this.time = this.experience.time
+        this.debug = this.experience.debug
+
+        // Debug
+        if(this.debug.active) {
+            this.debugFolder = this.debug.ui.addFolder('fox')
+        }
 
         // Setup
         this.resource = this.resources.items.foxModel
