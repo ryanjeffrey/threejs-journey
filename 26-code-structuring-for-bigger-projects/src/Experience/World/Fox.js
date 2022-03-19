@@ -35,9 +35,14 @@ export default class Fox {
 
     setAnimation() {
         this.animation = {}
+
         this.animation.mixer = new THREE.AnimationMixer(this.model)
-        this.animation.action = this.animation.mixer.clipAction(this.resource.animations[0])
-        this.animation.action.play()
+
+        this.animation.actions = {}
+
+        this.animation.actions.survey = this.animation.mixer.clipAction(this.resource.animations[0])
+        this.animation.actions.walking = this.animation.mixer.clipAction(this.resource.animations[1])
+        this.animation.actions.running = this.animation.mixer.clipAction(this.resource.animations[2])
     }
 
     update() {
