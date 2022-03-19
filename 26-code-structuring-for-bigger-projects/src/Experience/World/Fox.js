@@ -50,6 +50,10 @@ export default class Fox {
         this.animation.play = (name) => {
             const newAction = this.animation.actions[name]
             const oldAction = this.animation.actions.current
+
+            newAction.reset()
+            newAction.play()
+            newAction.crossFadeFrom(oldAction, 1)
         }
     }
 
