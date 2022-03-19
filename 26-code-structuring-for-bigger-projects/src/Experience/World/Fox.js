@@ -43,6 +43,9 @@ export default class Fox {
         this.animation.actions.survey = this.animation.mixer.clipAction(this.resource.animations[0])
         this.animation.actions.walking = this.animation.mixer.clipAction(this.resource.animations[1])
         this.animation.actions.running = this.animation.mixer.clipAction(this.resource.animations[2])
+
+        this.animation.actions.current = this.animation.actions.survey
+        this.animation.actions.current.play()
     }
 
     update() {
