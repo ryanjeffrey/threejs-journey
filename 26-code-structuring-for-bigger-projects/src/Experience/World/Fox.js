@@ -57,6 +57,18 @@ export default class Fox {
 
             this.animation.actions.current = newAction
         }
+
+        // Debug
+        if(this.debug.active) {
+            const debugObject = {
+                playSurvey: () => { this.animation.play('survey') },
+                playWalking: () => { this.animation.play('walking') },
+                playRunning: () => { this.animation.play('running') }
+            }
+            this.debugFolder.add(debugObject, 'playSurvey')
+            this.debugFolder.add(debugObject, 'playWalking')
+            this.debugFolder.add(debugObject, 'playRunning')
+        }
     }
 
     update() {
