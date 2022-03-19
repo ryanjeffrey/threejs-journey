@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import Experience from '../Experience.js'
+import Environment from './Environment.js'
 
 export default class World {
     constructor() {
@@ -12,5 +13,8 @@ export default class World {
             new THREE.MeshStandardMaterial()
         )
         this.scene.add(testMesh)
+
+        // Setup
+        this.environment = new Environment()
     }
 }
