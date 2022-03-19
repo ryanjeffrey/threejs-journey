@@ -54,6 +54,8 @@ export default class Fox {
             newAction.reset()
             newAction.play()
             newAction.crossFadeFrom(oldAction, 1)
+
+            this.animation.actions.current = newAction
         }
     }
 
