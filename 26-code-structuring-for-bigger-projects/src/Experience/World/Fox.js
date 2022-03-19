@@ -11,6 +11,7 @@ export default class Fox {
         this.resource = this.resources.items.foxModel
 
         this.setModel()
+        this.setAnimation()
     }
 
     setModel() {
@@ -23,5 +24,12 @@ export default class Fox {
                 child.castShadow = true
             }
         })
+    }
+
+    setAnimation() {
+        this.animation = {}
+        this.animation.mixer = new THREE.AnimationMixer(this.model)
+        this.animation.action = this.animation.mixer.clipAction(this.resource.animations[0])
+        this.animation.action.play()
     }
 }
