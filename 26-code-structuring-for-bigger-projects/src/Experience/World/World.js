@@ -17,4 +17,10 @@ export default class World {
             this.environment = new Environment()
         })
     }
+
+    update() {
+        if(this.fox){
+            this.fox.update()
+        }
+    }
 }
