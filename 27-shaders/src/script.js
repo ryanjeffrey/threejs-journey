@@ -42,7 +42,11 @@ geometry.setAttribute('aRandom', new THREE.BufferAttribute(randoms, 1))
 const material = new THREE.RawShaderMaterial({
     vertexShader: testVertexShader,
     fragmentShader: testFragmentShader,
-    side: THREE.DoubleSide
+    side: THREE.DoubleSide,
+    uniforms:
+    {
+        uFrequency: { value: 10 }
+    }
 })
 
 // Mesh
