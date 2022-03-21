@@ -45,7 +45,7 @@ const material = new THREE.RawShaderMaterial({
     side: THREE.DoubleSide,
     uniforms:
     {
-        uFrequency: { value: 10 }
+        uFrequency: { value: new THREE.Vector2(10, 5) }
     }
 })
 
