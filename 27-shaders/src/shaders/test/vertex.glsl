@@ -8,6 +8,7 @@ attribute vec3 position;
 attribute vec2 uv;
 
 varying vec2 vUv;
+varying float vElevation;
 
 void main()
 {
@@ -24,4 +25,5 @@ void main()
     gl_Position = projectedPosition;
 
     vUv = uv;
+    vElevation = elevation;
 }
