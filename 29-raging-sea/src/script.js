@@ -31,7 +31,8 @@ const waterMaterial = new THREE.ShaderMaterial({
     {
         uTime: { value: 0 },
         uBigWavesElevation: { value: 0.2 },
-        uBigWavesFrequency: { value: new THREE.Vector2(4, 1.5) }
+        uBigWavesFrequency: { value: new THREE.Vector2(4, 1.5) },
+        uBigWavesSpeed: { value: 0.75 }
     }
 })
 
