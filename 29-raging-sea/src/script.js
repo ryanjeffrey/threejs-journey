@@ -99,6 +99,9 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
+    // Update water
+    waterMaterial.uniforms.uTime.value = elapsedTime
+
     // Update controls
     controls.update()
 
