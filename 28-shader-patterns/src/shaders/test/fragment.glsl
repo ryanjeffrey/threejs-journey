@@ -96,9 +96,10 @@ void main()
     // float strength = mod(vUv.x * 10.0, 1.0);
     // strength = step(0.8, strength);
 
-    // // Pattern 11
-    // float strength = step(0.8, mod(vUv.x * 10.0, 1.0));
-    // strength += step(0.8, mod(vUv.y * 10.0, 1.0));
+    // Pattern 11
+    float strength = step(0.8, mod(vUv.x * 10.0, 1.0));
+    strength += step(0.8, mod(vUv.y * 10.0, 1.0));
+    strength = clamp(strength, 0.0, 1.0);
 
     // // Pattern 12
     // float strength = step(0.8, mod(vUv.x * 10.0, 1.0));
@@ -116,6 +117,7 @@ void main()
     // barY *= step(0.4, mod(vUv.y * 10.0, 1.0));
 
     // float strength = barX + barY;
+    // strength = clamp(strength, 0.0, 1.0);
 
     // // Pattern 15
     // float barX = step(0.4, mod(vUv.x * 10.0, 1.0));
@@ -125,6 +127,7 @@ void main()
     // barY *= step(0.4, mod(vUv.y * 10.0, 1.0));
 
     // float strength = barX + barY;
+    // strength = clamp(strength, 0.0, 1.0);
 
     // // Pattern 16
     // float strength = abs(vUv.x - 0.5);
@@ -251,8 +254,8 @@ void main()
     // // Pattern 49
     // float strength = sin(cnoise(vUv * 10.0) * 20.0);
 
-    // Pattern 50
-    float strength = step(0.9, sin(cnoise(vUv * 10.0) * 20.0));
+    // // Pattern 50
+    // float strength = step(0.9, sin(cnoise(vUv * 10.0) * 20.0));
 
     // Color version
     vec3 blackColor = vec3(0.0);
