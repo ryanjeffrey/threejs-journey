@@ -86,10 +86,10 @@ const generateGalaxy = () =>
      * Material
      */
     material = new THREE.ShaderMaterial({
-      depthWrite: false,
-      blending: THREE.AdditiveBlending,
-      vertexColors: true,
-      vertexShader: `
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        vertexColors: true,
+        vertexShader: `
             void main()
             {
                 /**
@@ -106,6 +106,12 @@ const generateGalaxy = () =>
                 gl_PointSize = 2.0;
             }
         `,
+        fragmentShader: `
+            void main()
+            {
+                gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+            }
+        `
     });
 
     /**
