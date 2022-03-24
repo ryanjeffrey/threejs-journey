@@ -2,6 +2,8 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
+import galaxyVertexShader from './shaders/galaxy/vertex.glsl'
+import galaxyFragmentShader from './shaders/galaxy/fragment.glsl'
 
 /**
  * Base
@@ -89,8 +91,8 @@ const generateGalaxy = () =>
         depthWrite: false,
         blending: THREE.AdditiveBlending,
         vertexColors: true,
-        vertexShader: ``,
-        fragmentShader: ``
+        vertexShader: galaxyVertexShader,
+        fragmentShader: galaxyFragmentShader
     });
 
     /**
