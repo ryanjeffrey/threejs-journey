@@ -92,7 +92,11 @@ const generateGalaxy = () =>
         blending: THREE.AdditiveBlending,
         vertexColors: true,
         vertexShader: galaxyVertexShader,
-        fragmentShader: galaxyFragmentShader
+        fragmentShader: galaxyFragmentShader,
+        uniforms:
+        {
+            uSize: { value: 8 }
+        }
     });
 
     /**
