@@ -10,6 +10,7 @@ import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js'
 import { RGBShiftShader } from 'three/examples/jsm/shaders/RGBShiftShader.js'
 import { GammaCorrectionShader } from 'three/examples/jsm/shaders/GammaCorrectionShader.js'
 import { SMAAPass } from 'three/examples/jsm/postprocessing/SMAAPass.js'
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
 import * as dat from 'lil-gui'
 
 /**
@@ -183,6 +184,11 @@ effectComposer.addPass(glitchPass)
 const rgbShiftPass = new ShaderPass(RGBShiftShader)
 rgbShiftPass.enabled = false
 effectComposer.addPass(rgbShiftPass)
+
+// Unreal bloom pass
+const unrealBloomPass = new UnrealBloomPass()
+unrealBloomPass.enabled = true
+effectComposer.addPass(unrealBloomPass)
 
 // Keep this Gamma Correction and SMAA as the final passes
 const gammaCorrectionShader = new ShaderPass(GammaCorrectionShader)
