@@ -243,6 +243,7 @@ gui.add(tintPass.material.uniforms.uTint.value, 'z').min(- 1).max(1).step(0.001)
 const DisplacementShader = {
     uniforms: {
         tDiffuse: { value: null },
+        uTime: { value: null }
     },
     vertexShader: `
         varying vec2 vUv;
@@ -256,6 +257,7 @@ const DisplacementShader = {
     `,
     fragmentShader: `
         uniform sampler2D tDiffuse;
+        uniform float uTime;
 
         varying vec2 vUv;
 
@@ -263,7 +265,7 @@ const DisplacementShader = {
         {
             vec2 newUv = vec2(
                 vUv.x,
-                vUv.y + sin(vUv.x * 10.0) * 0.1
+                vUv.y + sin(vUv.x * 10.0 + uTime) * 0.1
             );
             
             vec4 color = texture2D(tDiffuse, newUv);
