@@ -188,7 +188,16 @@ effectComposer.addPass(rgbShiftPass)
 // Unreal bloom pass
 const unrealBloomPass = new UnrealBloomPass()
 unrealBloomPass.enabled = true
+unrealBloomPass.strength = 0.3
+unrealBloomPass.radius = 1
+unrealBloomPass.threshold = 0
 effectComposer.addPass(unrealBloomPass)
+
+// Debug
+gui.add(unrealBloomPass, 'enabled')
+gui.add(unrealBloomPass, 'strength').min(0).max(2).step(0.001)
+gui.add(unrealBloomPass, 'radius').min(0).max(2).step(0.001)
+gui.add(unrealBloomPass, 'threshold').min(0).max(1).step(0.001)
 
 // Keep this Gamma Correction and SMAA as the final passes
 const gammaCorrectionShader = new ShaderPass(GammaCorrectionShader)
