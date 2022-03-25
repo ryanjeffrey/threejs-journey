@@ -160,6 +160,7 @@ glitchPass.enabled = false
 effectComposer.addPass(glitchPass)
 
 const rgbShiftPass = new ShaderPass(RGBShiftShader)
+rgbShiftPass.enabled = false
 effectComposer.addPass(rgbShiftPass)
 
 // Keep this Gamma Correction as the final pass
