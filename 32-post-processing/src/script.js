@@ -233,7 +233,11 @@ const TintShader = {
 
 const tintPass = new ShaderPass(TintShader)
 tintPass.material.uniforms.uTint.value = new THREE.Vector3()
-effectComposer.addPass(tintPass) 
+effectComposer.addPass(tintPass)
+
+gui.add(tintPass.material.uniforms.uTint.value, 'x').min(- 1).max(1).step(0.001).name('uTintR')
+gui.add(tintPass.material.uniforms.uTint.value, 'y').min(- 1).max(1).step(0.001).name('uTintG')
+gui.add(tintPass.material.uniforms.uTint.value, 'z').min(- 1).max(1).step(0.001).name('uTintB')
 
 // Keep this Gamma Correction and SMAA as the final passes
 const gammaCorrectionShader = new ShaderPass(GammaCorrectionShader)
