@@ -276,6 +276,7 @@ const DisplacementShader = {
 }
 
 const displacementPass = new ShaderPass(DisplacementShader)
+displacementPass.material.uniforms.uTime.value = 0
 effectComposer.addPass(displacementPass)
 
 // Keep this Gamma Correction and SMAA as the final passes
