@@ -194,10 +194,10 @@ unrealBloomPass.threshold = 0
 effectComposer.addPass(unrealBloomPass)
 
 // Debug
-gui.add(unrealBloomPass, 'enabled')
-gui.add(unrealBloomPass, 'strength').min(0).max(2).step(0.001)
-gui.add(unrealBloomPass, 'radius').min(0).max(2).step(0.001)
-gui.add(unrealBloomPass, 'threshold').min(0).max(1).step(0.001)
+gui.add(unrealBloomPass, 'enabled').name('unrealBloomPassEnabled')
+gui.add(unrealBloomPass, 'strength').min(0).max(2).step(0.001).name('unrealBloomPassStrength')
+gui.add(unrealBloomPass, 'radius').min(0).max(2).step(0.001).name('unrealBloomPassRadius')
+gui.add(unrealBloomPass, 'threshold').min(0).max(1).step(0.001).name('unrealBloomPassThreshold')
 
 // Tint pass
 const TintShader = {
