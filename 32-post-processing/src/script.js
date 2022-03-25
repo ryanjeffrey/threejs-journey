@@ -232,6 +232,7 @@ const TintShader = {
 }
 
 const tintPass = new ShaderPass(TintShader)
+tintPass.material.uniforms.uTint.value = new THREE.Vector3()
 effectComposer.addPass(tintPass) 
 
 // Keep this Gamma Correction and SMAA as the final passes
