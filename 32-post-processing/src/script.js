@@ -162,6 +162,10 @@ effectComposer.addPass(glitchPass)
 const rgbShiftPass = new ShaderPass(RGBShiftShader)
 effectComposer.addPass(rgbShiftPass)
 
+// Keep this Gamma Correction as the final pass
+const gammaCorrectionShader = new ShaderPass(GammaCorrectionShader)
+effectComposer.addPass(gammaCorrectionShader)
+
 /**
  * Animate
  */
