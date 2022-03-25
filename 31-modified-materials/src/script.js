@@ -111,6 +111,36 @@ material.onBeforeCompile = (shader) =>
     )
 }
 
+depthMaterial.onBeforeCompile = (shader) =>
+{
+    shader.uniforms.uTime = customUniforms.uTime
+    shader.vertexShader = shader.vertexShader.replace(
+        '#include <common>', 
+        `
+            #include <common>
+
+            uniform float uTime;
+
+            mat2 get2dRotateMatrix(float _angle)
+            {
+                return mat2(cos(_angle), - sin(_angle), sin(_angle), cos(_angle));
+            }
+
+        `
+    )
+    shader.vertexShader = shader.vertexShader.replace(
+        '#include <begin_vertex>', 
+        `
+            #include <begin_vertex>
+
+            float angle = (position.y + uTime) * 0.9;
+            mat2 rotateMatrix = get2dRotateMatrix(angle);
+
+            transformed.xz = transformed.xz * rotateMatrix;
+        `
+    )
+}
+
 /**
  * Models
  */
