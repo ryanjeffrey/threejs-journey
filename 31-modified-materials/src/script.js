@@ -196,6 +196,9 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
+    // Update material
+    customUniforms.uTime.value = elapsedTime
+
     // Update controls
     controls.update()
 
