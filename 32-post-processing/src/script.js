@@ -202,7 +202,8 @@ gui.add(unrealBloomPass, 'threshold').min(0).max(1).step(0.001)
 // Tint pass
 const TintShader = {
     uniforms: {
-        tDiffuse: { value: null }
+        tDiffuse: { value: null },
+        uTint: { value: null }
     },
     vertexShader: `
         varying vec2 vUv;
@@ -216,13 +217,14 @@ const TintShader = {
     `,
     fragmentShader: `
         uniform sampler2D tDiffuse;
+        uniform vec3 uTint;
 
         varying vec2 vUv;
 
         void main()
         {
             vec4 color = texture2D(tDiffuse, vUv);
-            color.r +=0.1;
+            color.rgb += uTint;
 
             gl_FragColor = color;
         }
