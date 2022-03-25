@@ -99,6 +99,12 @@ material.onBeforeCompile = (shader) =>
         `
     )
     shader.vertexShader = shader.vertexShader.replace(
+        '#include <beginnormal_vertex>',
+        `
+            #include <beginnormal_vertex>
+        `
+    )
+    shader.vertexShader = shader.vertexShader.replace(
         '#include <begin_vertex>', 
         `
             #include <begin_vertex>
