@@ -93,6 +93,8 @@ material.onBeforeCompile = (shader) =>
 
             float angle = 0.3;
             mat2 rotateMatrix = get2dRotateMatrix(angle);
+
+            transformed.xz = transformed.xz * rotateMatrix;
         `
     )
 }
