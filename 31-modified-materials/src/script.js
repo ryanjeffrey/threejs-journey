@@ -72,6 +72,11 @@ const material = new THREE.MeshStandardMaterial( {
     normalMap: normalTexture
 })
 
+const customUniforms = 
+{
+    uTime: { value: 0 }
+}
+
 material.onBeforeCompile = (shader) =>
 {
     shader.uniforms.uTime = { value: 0 }
