@@ -147,7 +147,18 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 /**
  * Post processing
  */
-const effectComposer = new EffectComposer(renderer)
+// Render target
+const renderTarget = new THREE.WebGLRenderTarget(
+    800,
+    600,
+    {
+        minFilter: THREE.LinearFilter,
+        magFilter: THREE.LinearFilter,
+        format: THREE.RGBAFormat
+    }
+)
+
+const effectComposer = new EffectComposer(renderer, renderTarget)
 effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 effectComposer.setSize(sizes.width, sizes.height)
 
