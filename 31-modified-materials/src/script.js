@@ -74,6 +74,7 @@ const material = new THREE.MeshStandardMaterial( {
 
 material.onBeforeCompile = (shader) =>
 {
+    shader.uniforms.uTime = { value: 0 }
     shader.vertexShader = shader.vertexShader.replace(
         '#include <common>', 
         `
