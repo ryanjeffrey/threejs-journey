@@ -159,22 +159,27 @@ const renderTarget = new THREE.WebGLRenderTarget(
     }
 )
 
+// Effect composer
 const effectComposer = new EffectComposer(renderer, renderTarget)
 effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 effectComposer.setSize(sizes.width, sizes.height)
 
+// Render pass
 const renderPass = new RenderPass(scene, camera)
 effectComposer.addPass(renderPass)
 
+// Dot Screen pass
 const dotScreenPass = new DotScreenPass()
 dotScreenPass.enabled = false
 effectComposer.addPass(dotScreenPass)
 
+// Glitch pass
 const glitchPass = new GlitchPass()
 glitchPass.goWild = false
 glitchPass.enabled = false
 effectComposer.addPass(glitchPass)
 
+// RGB shift pass
 const rgbShiftPass = new ShaderPass(RGBShiftShader)
 rgbShiftPass.enabled = false
 effectComposer.addPass(rgbShiftPass)
@@ -182,7 +187,7 @@ effectComposer.addPass(rgbShiftPass)
 // Keep this Gamma Correction and SMAA as the final passes
 const gammaCorrectionShader = new ShaderPass(GammaCorrectionShader)
 effectComposer.addPass(gammaCorrectionShader)
-
+// Anti-Alias
 const smaaPass = new SMAAPass()
 effectComposer.addPass(smaaPass)
 
