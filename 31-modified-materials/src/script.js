@@ -126,6 +126,18 @@ gltfLoader.load(
 )
 
 /**
+ * Plane
+ */
+const plane = new THREE.Mesh(
+    new THREE.PlaneBufferGeometry(15, 15, 15),
+    new THREE.MeshStandardMaterial()
+)
+plane.rotation.y = Math.PI
+plane.position.y = - 5
+plane.position.z = 5
+scene.add(plane)
+
+/**
  * Lights
  */
 const directionalLight = new THREE.DirectionalLight('#ffffff', 3)
