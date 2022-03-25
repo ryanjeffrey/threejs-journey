@@ -295,6 +295,9 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
+    // Update passes
+    displacementPass.material.uniforms.uTime.value = elapsedTime
+
     // Update controls
     controls.update()
 
