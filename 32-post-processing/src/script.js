@@ -243,6 +243,7 @@ gui.add(tintPass.material.uniforms.uTint.value, 'z').min(- 1).max(1).step(0.001)
 const DisplacementShader = {
     uniforms: {
         tDiffuse: { value: null },
+        uNormalMap: { value: null }
     },
     vertexShader: `
         varying vec2 vUv;
