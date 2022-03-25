@@ -187,7 +187,7 @@ effectComposer.addPass(rgbShiftPass)
 
 // Unreal bloom pass
 const unrealBloomPass = new UnrealBloomPass()
-unrealBloomPass.enabled = true
+unrealBloomPass.enabled = false
 unrealBloomPass.strength = 0.3
 unrealBloomPass.radius = 1
 unrealBloomPass.threshold = 0
@@ -198,6 +198,26 @@ gui.add(unrealBloomPass, 'enabled')
 gui.add(unrealBloomPass, 'strength').min(0).max(2).step(0.001)
 gui.add(unrealBloomPass, 'radius').min(0).max(2).step(0.001)
 gui.add(unrealBloomPass, 'threshold').min(0).max(1).step(0.001)
+
+// Tint pass
+const TintShader = {
+    uniforms: {},
+    vertexShader: `
+        void main()
+        {
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    `,
+    fragmentShader: `
+        void main()
+        {
+            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+        }
+    `
+}
+
+const tintPass = new ShaderPass(TintShader)
+effectComposer.addPass(tintPass) 
 
 // Keep this Gamma Correction and SMAA as the final passes
 const gammaCorrectionShader = new ShaderPass(GammaCorrectionShader)
