@@ -135,6 +135,13 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
+ * Post processing
+ */
+const effectComposer = new EffectComposer(renderer)
+effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+effectComposer.setSize(sizes.width, sizes.height)
+
+/**
  * Animate
  */
 const clock = new THREE.Clock()
