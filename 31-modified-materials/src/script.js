@@ -79,7 +79,7 @@ const customUniforms =
 
 material.onBeforeCompile = (shader) =>
 {
-    shader.uniforms.uTime = { value: 0 }
+    shader.uniforms.uTime = customUniforms.uTime
     shader.vertexShader = shader.vertexShader.replace(
         '#include <common>', 
         `
