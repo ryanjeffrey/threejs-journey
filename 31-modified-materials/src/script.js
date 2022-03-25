@@ -78,6 +78,8 @@ material.onBeforeCompile = (shader) =>
         '#include <begin_vertex>', 
         `
             #include <begin_vertex>
+
+            float angle = 0.3;
         `
     )
 }
