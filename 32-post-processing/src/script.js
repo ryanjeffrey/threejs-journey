@@ -158,6 +158,9 @@ glitchPass.goWild = false
 glitchPass.enabled = false
 effectComposer.addPass(glitchPass)
 
+const rgbShiftPass = new ShaderPass(RGBShiftShader)
+effectComposer.addPass(rgbShiftPass)
+
 /**
  * Animate
  */
