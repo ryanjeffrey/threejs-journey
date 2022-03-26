@@ -7,6 +7,8 @@ import Stats from 'stats.js'
  * Stats
  */
 const stats = new Stats()
+stats.showPanel(0)
+document.body.appendChild(stats.dom)
 
 /**
  * Base
@@ -128,6 +130,8 @@ const clock = new THREE.Clock()
 
 const tick = () =>
 {
+    stats.begin()
+
     const elapsedTime = clock.getElapsedTime()
 
     // Update test mesh
@@ -141,6 +145,8 @@ const tick = () =>
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
+
+    stats.end()
 }
 
 tick()
