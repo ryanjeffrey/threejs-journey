@@ -187,9 +187,9 @@ sphere.receiveShadow = false
 floor.castShadow = false
 floor.receiveShadow = true
 
-// Tip 12
-renderer.shadowMap.autoUpdate = false
-renderer.shadowMap.needsUpdate = true
+// // Tip 12
+// renderer.shadowMap.autoUpdate = false
+// renderer.shadowMap.needsUpdate = true
 
 // // Tip 18
 // for(let i = 0; i < 50; i++)
