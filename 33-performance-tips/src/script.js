@@ -323,9 +323,7 @@ const shaderMaterial = new THREE.ShaderMaterial({
             vec3 depthColor = vec3(1.0, 0.1, 0.1);
             vec3 surfaceColor = vec3(0.1, 0.0, 0.5);
             vec3 finalColor = vec3(0.0);
-            finalColor.r += depthColor.r + (surfaceColor.r - depthColor.r) * elevation;
-            finalColor.g += depthColor.g + (surfaceColor.g - depthColor.g) * elevation;
-            finalColor.b += depthColor.b + (surfaceColor.b - depthColor.b) * elevation;
+            finalColor = mix(depthColor, surfaceColor, elevation);
 
             gl_FragColor = vec4(finalColor, 1.0);
         }
