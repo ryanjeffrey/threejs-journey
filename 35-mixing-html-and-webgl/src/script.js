@@ -217,6 +217,8 @@ const tick = () =>
         const screenPosition = point.position.clone()
         screenPosition.project(camera)
 
+        raycaster.setFromCamera(screenPosition, camera)
+
         const translateX = screenPosition.x * sizes.width * 0.5
         const translateY = - screenPosition.y * sizes.width * 0.5
         point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`
