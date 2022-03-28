@@ -6,7 +6,19 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 /**
  * Loaders
  */
-const loadingManager = new THREE.LoadingManager()
+const loadingManager = new THREE.LoadingManager(
+    // Loaded
+    () =>
+    {
+        console.log('loaded')
+    },
+
+    // Progress
+    () =>
+    {
+        console.log('progress')
+    }
+)
 const gltfLoader = new GLTFLoader(loadingManager)
 const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
 
