@@ -15,9 +15,9 @@ const loadingManager = new THREE.LoadingManager(
     },
 
     // Progress
-    () =>
+    (itemUrl, itemsLoaded, itemsTotal) =>
     {
-        console.log('progress')
+        console.log(itemsLoaded / itemsTotal)
     }
 )
 const gltfLoader = new GLTFLoader(loadingManager)
