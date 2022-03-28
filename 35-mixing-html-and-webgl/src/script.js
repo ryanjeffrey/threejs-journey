@@ -227,6 +227,7 @@ const tick = () =>
         else
         {
             const intersectionDistance = intersects[0].distance
+            const pointDistance = point.position.distanceTo(camera.position)
         }
         
         
