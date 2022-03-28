@@ -14,8 +14,9 @@ const loadingManager = new THREE.LoadingManager(
     () =>
     {
         gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0 })
-        
+
         loadingBarElement.classList.add('ended')
+        loadingBarElement.style.transform = ''
     },
 
     // Progress
