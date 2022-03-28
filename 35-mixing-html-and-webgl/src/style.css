@@ -44,6 +44,11 @@ body
     left: 50%;
 }
 
+.point:hover .text
+{
+    opacity: 1;
+}
+
 .point .label
 {
     position: absolute;
