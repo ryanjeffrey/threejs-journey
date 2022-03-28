@@ -25,7 +25,20 @@ const scene = new THREE.Scene()
  * Overlay
  */
 const overlayGeometry = new THREE.PlaneBufferGeometry(1, 1, 1, 1)
-const overlayMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 })
+const overlayMaterial = new THREE.ShaderMaterial({ 
+    vertexShader: `
+        void main()
+        {
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    `,
+    fragmentShader: `
+        void main()
+        {
+            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+        }
+    `
+ })
 const overlay = new THREE.Mesh(overlayGeometry, overlayMaterial)
 scene.add(overlay)
 
