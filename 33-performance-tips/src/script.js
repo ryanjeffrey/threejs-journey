@@ -285,6 +285,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 const shaderGeometry = new THREE.PlaneGeometry(10, 10, 256, 256)
 
 const shaderMaterial = new THREE.ShaderMaterial({
+    precision: 'lowp',
     uniforms:
     {
         uDisplacementTexture: { value: displacementTexture },
