@@ -228,10 +228,17 @@ const tick = () =>
         {
             const intersectionDistance = intersects[0].distance
             const pointDistance = point.position.distanceTo(camera.position)
+
+            if(intersectionDistance < pointDistance)
+            {
+                point.element.classList.remove('visible')
+            }
+            else
+            {
+                point.element.classList.add('visible')
+            }
         }
         
-        
-
         const translateX = screenPosition.x * sizes.width * 0.5
         const translateY = - screenPosition.y * sizes.width * 0.5
         point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`
