@@ -85,4 +85,5 @@ body
     font-size: 14px;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
+    pointer-events: none;
 }
