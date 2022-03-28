@@ -26,6 +26,7 @@ const scene = new THREE.Scene()
  */
 const overlayGeometry = new THREE.PlaneBufferGeometry(2, 2, 1, 1)
 const overlayMaterial = new THREE.ShaderMaterial({
+    transparent: true,
     wireframe: false,
     vertexShader: `
         void main()
