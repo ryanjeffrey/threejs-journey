@@ -13,10 +13,12 @@ const loadingManager = new THREE.LoadingManager(
     // Loaded
     () =>
     {
-        gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0, delay: 1 })
+        window.setTimeout(() => {
+            gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0, delay: 1 })
 
-        loadingBarElement.classList.add('ended')
-        loadingBarElement.style.transform = ''
+            loadingBarElement.classList.add('ended')
+            loadingBarElement.style.transform = ''
+        }, 500)
     },
 
     // Progress
