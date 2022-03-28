@@ -220,6 +220,15 @@ const tick = () =>
         raycaster.setFromCamera(screenPosition, camera)
         const intersects = raycaster.intersectObjects(scene.children, true)
 
+        if(intersects.length === 0)
+        {
+            point.element.classList.add('visible')
+        }
+        else
+        {
+            point.element.classList.remove('visible')
+        }
+
         const translateX = screenPosition.x * sizes.width * 0.5
         const translateY = - screenPosition.y * sizes.width * 0.5
         point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`
