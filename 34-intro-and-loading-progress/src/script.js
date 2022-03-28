@@ -7,6 +7,9 @@ import { gsap } from 'gsap'
 /**
  * Loaders
  */
+const loadingBarElement = document.querySelector('.loading-bar')
+console.log(loadingBarElement)
+
 const loadingManager = new THREE.LoadingManager(
     // Loaded
     () =>
