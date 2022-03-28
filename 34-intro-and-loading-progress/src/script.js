@@ -20,7 +20,8 @@ const loadingManager = new THREE.LoadingManager(
     // Progress
     (itemUrl, itemsLoaded, itemsTotal) =>
     {
-        console.log(itemsLoaded / itemsTotal)
+        const progressRatio = itemsLoaded / itemsTotal
+        console.log(progressRatio)
     }
 )
 const gltfLoader = new GLTFLoader(loadingManager)
