@@ -61,3 +61,19 @@ body
     font-weight: 100;
     font-size: 14px;
 }
+
+.point .text
+{
+    position: absolute;
+    top: 30px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 4px;
+    background: #00000077;
+    border: 1px solid #ffffff77;
+    color: #ffffff;
+    line-height: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+}
