@@ -8,6 +8,7 @@ import { Raycaster } from 'three'
 /**
  * Loaders
  */
+let sceneReady = false
 const loadingBarElement = document.querySelector('.loading-bar')
 const loadingManager = new THREE.LoadingManager(
     // Loaded
@@ -23,6 +24,12 @@ const loadingManager = new THREE.LoadingManager(
             loadingBarElement.classList.add('ended')
             loadingBarElement.style.transform = ''
         }, 500)
+
+        // Wait for sceneReady before displaying html
+        window.setTimeout(() =>
+        {
+            sceneReady = true
+        }, 2000)
     },
 
     // Progress
