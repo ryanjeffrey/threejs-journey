@@ -11,7 +11,7 @@ const loadingManager = new THREE.LoadingManager(
     // Loaded
     () =>
     {
-        console.log('loaded')
+        gsap.to(overlayMaterial.uniforms.uAlpha, { duration: 3, value: 0 })
     },
 
     // Progress
