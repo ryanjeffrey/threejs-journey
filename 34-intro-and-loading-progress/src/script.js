@@ -28,6 +28,10 @@ const overlayGeometry = new THREE.PlaneBufferGeometry(2, 2, 1, 1)
 const overlayMaterial = new THREE.ShaderMaterial({
     transparent: true,
     wireframe: false,
+    uniforms:
+    {
+        uAlpha: { value: 1 }
+    },
     vertexShader: `
         void main()
         {
