@@ -66,6 +66,13 @@ body
     font-weight: 100;
     font-size: 14px;
     cursor: help;
+    transform: scale(0, 0);
+    transition: transform 0.3s;
+}
+
+.point.visible .label
+{
+    transform: scale(1, 1);
 }
 
 .point .text
