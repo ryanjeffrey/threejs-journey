@@ -226,8 +226,10 @@ const tick = () =>
         }
         else
         {
-            point.element.classList.remove('visible')
+            const intersectionDistance = intersects[0].distance
         }
+        
+        
 
         const translateX = screenPosition.x * sizes.width * 0.5
         const translateY = - screenPosition.y * sizes.width * 0.5
