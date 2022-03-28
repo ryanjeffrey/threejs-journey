@@ -302,12 +302,8 @@ const shaderMaterial = new THREE.ShaderMaterial({
             vec4 modelPosition = modelMatrix * vec4(position, 1.0);
 
             float elevation = texture2D(uDisplacementTexture, uv).r;
-            if(elevation < 0.5)
-            {
-                elevation = 0.5;
-            }
 
-            modelPosition.y += elevation * uDisplacementStrength;
+            modelPosition.y += clamp(elevation, 0.5, 1.0) * uDisplacementStrength;
 
             gl_Position = projectionMatrix * viewMatrix * modelPosition;
 
@@ -322,10 +318,7 @@ const shaderMaterial = new THREE.ShaderMaterial({
         void main()
         {
             float elevation = texture2D(uDisplacementTexture, vUv).r;
-            if(elevation < 0.25)
-            {
-                elevation = 0.25;
-            }
+            elevation = max(elevation, 0.25);
 
             vec3 depthColor = vec3(1.0, 0.1, 0.1);
             vec3 surfaceColor = vec3(0.1, 0.0, 0.5);
