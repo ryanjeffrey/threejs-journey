@@ -46,6 +46,9 @@ bakedTexture.encoding = THREE.sRGBEncoding
 // Baked material
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
 
+// Pole light material
+const poleLightMaterial = new THREE.MeshBasicMaterial({ color: 0xffffe5 })
+
 /**
  * Model
  */
