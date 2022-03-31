@@ -43,6 +43,7 @@ const bakedTexture = textureLoader.load('baked.jpg')
  */
 // Baked material
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
+bakedTexture.flipY = false
 
 /**
  * Model
