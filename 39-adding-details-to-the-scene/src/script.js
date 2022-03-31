@@ -77,6 +77,12 @@ gltfLoader.load(
 )
 
 /**
+ * Fireflies
+ */
+// Geometry
+const firefliesGeometry = new THREE.BufferGeometry()
+
+/**
  * Sizes
  */
 const sizes = {
