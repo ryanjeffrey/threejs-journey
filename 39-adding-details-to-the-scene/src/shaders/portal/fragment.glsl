@@ -87,5 +87,8 @@ void main ()
     // Perlin noise
     float strength = cnoise(vec3(displacedUv * 5.0, uTime * 0.2));
 
-    gl_FragColor = vec4(strength, strength, strength, 1.0);
+    // Outer glow
+    float outerGlow = distance(vUv, vec2(0.5));
+
+    gl_FragColor = vec4(outerGlow, outerGlow, outerGlow, 1.0);
 }
