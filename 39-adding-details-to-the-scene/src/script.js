@@ -86,9 +86,9 @@ const positionArray = new Float32Array(firefliesCount * 3)
 
 for(let i = 0; i < firefliesCount; i++)
 {
-    positionArray[i * 3 + 0] = Math.random() * 4
-    positionArray[i * 3 + 1] = Math.random() * 4
-    positionArray[i * 3 + 2] = Math.random() * 4
+    positionArray[i * 3 + 0] = (Math.random() - 0.5) * 4
+    positionArray[i * 3 + 1] = Math.random() * 1.8
+    positionArray[i * 3 + 2] = (Math.random() - 0.5) * 4
 }
 
 firefliesGeometry.setAttribute('position', new THREE.BufferAttribute(positionArray, 3))
