@@ -92,7 +92,7 @@ void main ()
     strength += outerGlow;
 
     // Apply step
-    strength = step(- 0.2, strength);
+    strength += step(- 0.2, strength) * 0.8;
 
     gl_FragColor = vec4(strength, strength, strength, 1.0);
 }
