@@ -34,6 +34,11 @@ const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
 /**
+ * Textures
+ */
+const bakedTexture = textureLoader.load('baked.jpg')
+
+/**
  * Materials
  */
 // Baked material
