@@ -56,6 +56,9 @@ gltfLoader.load(
     'portal.glb',
     (gltf) =>
     {
+        gltf.scene.traverse((child) => {
+            child.material = bakedMaterial
+        })
         scene.add(gltf.scene)
     }
 )
