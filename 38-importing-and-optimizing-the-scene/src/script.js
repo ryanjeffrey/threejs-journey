@@ -64,6 +64,9 @@ gltfLoader.load(
         const poleLightBMesh = gltf.scene.children.find(child => child.name === 'poleLightB')
         const portalLightMesh = gltf.scene.children.find(child => child.name === 'portalLight')
 
+        poleLightAMesh.material = poleLightMaterial
+        poleLightBMesh.material = poleLightMaterial
+        
         scene.add(gltf.scene)
     }
 )
