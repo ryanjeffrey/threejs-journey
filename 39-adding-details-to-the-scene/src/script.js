@@ -97,6 +97,7 @@ firefliesGeometry.setAttribute('position', new THREE.BufferAttribute(positionArr
 
 // Material
 const firefliesMaterial = new THREE.ShaderMaterial({
+    transparent: true,
     uniforms:
     {
         uPixelRatio: { value: Math.min(window.devicePixelRatio, 2) },
