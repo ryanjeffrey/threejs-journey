@@ -66,6 +66,20 @@ const portalLightMaterial = new THREE.ShaderMaterial({
     fragmentShader: portalFragmentShader
 })
 
+debugObject.portalColorStart = '#ff0000'
+debugObject.portalColorEnd = '#0000ff'
+
+gui
+    .addColor(debugObject, 'portalColorStart')
+    .onChange(() => {
+        portalLightMaterial.uniforms.uColorStart.value.set(debugObject.portalColorStart)
+    })
+gui
+    .addColor(debugObject, 'portalColorEnd')
+    .onChange(() => {
+        portalLightMaterial.uniforms.uColorEnd.value.set(debugObject.portalColorEnd)
+    })
+
 /**
  * Model
  */
