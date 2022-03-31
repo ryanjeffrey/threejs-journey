@@ -126,7 +126,10 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 debugObject.clearColor = '#ff0000'
 renderer.setClearColor(debugObject.clearColor)
-gui.addColor(debugObject, 'clearColor')
+gui.addColor(debugObject, 'clearColor').onChange(() => 
+    {
+        renderer.setClearColor(debugObject.clearColor)
+    })
 
 /**
  * Animate
