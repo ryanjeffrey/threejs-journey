@@ -44,6 +44,17 @@ const cube = new THREE.Mesh(
 scene.add(cube)
 
 /**
+ * Model
+ */
+gltfLoader.load(
+    'portal.glb',
+    (gltf) =>
+    {
+        console.log(gltf.scene)
+    }
+)
+
+/**
  * Sizes
  */
 const sizes = {
