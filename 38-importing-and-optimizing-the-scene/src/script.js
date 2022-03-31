@@ -37,13 +37,14 @@ gltfLoader.setDRACOLoader(dracoLoader)
  * Textures
  */
 const bakedTexture = textureLoader.load('baked.jpg')
+bakedTexture.flipY = false
+bakedTexture.encoding = THREE.sRGBEncoding
 
 /**
  * Materials
  */
 // Baked material
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
-bakedTexture.flipY = false
 
 /**
  * Model
