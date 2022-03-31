@@ -75,11 +75,14 @@ float cnoise(vec3 P)
     return 2.2 * n_xyz;
 }
 
+uniform float uTime;
+
 varying vec2 vUv;
 
 void main ()
 {
-    float strength = cnoise(vec3(vUv * 5.0, 0.0));
+    // Perlin noise
+    float strength = cnoise(vec3(vUv * 5.0, uTime));
 
     gl_FragColor = vec4(strength, strength, strength, 1.0);
 }
