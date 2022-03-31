@@ -44,6 +44,12 @@ const cube = new THREE.Mesh(
 scene.add(cube)
 
 /**
+ * Materials
+ */
+// Baked material
+const bakedMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 })
+
+/**
  * Model
  */
 gltfLoader.load(
