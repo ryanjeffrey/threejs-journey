@@ -99,7 +99,8 @@ firefliesGeometry.setAttribute('position', new THREE.BufferAttribute(positionArr
 const firefliesMaterial = new THREE.ShaderMaterial({
     uniforms:
     {
-        uPixelRatio: { value: Math.min(window.devicePixelRatio, 2) }
+        uPixelRatio: { value: Math.min(window.devicePixelRatio, 2) },
+        uSize: { value: 100 }
     },
     vertexShader: firefliesVertexShader,
     fragmentShader: firefliesFragmentShader
