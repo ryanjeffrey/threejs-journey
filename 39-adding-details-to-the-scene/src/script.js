@@ -124,7 +124,7 @@ renderer.outputEncoding = THREE.sRGBEncoding
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-debugObject.clearColor = '#ff0000'
+debugObject.clearColor = '#615948'
 renderer.setClearColor(debugObject.clearColor)
 gui.addColor(debugObject, 'clearColor').onChange(() => 
     {
