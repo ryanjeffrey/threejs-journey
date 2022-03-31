@@ -96,6 +96,9 @@ void main ()
     // Apply step
     strength += step(- 0.2, strength) * 0.8;
 
+    // Clamp the value
+    strength = clamp(strength, 0.0, 1.0);
+
     // Final color
     vec3 color = mix(uColorStart, uColorEnd, strength);
 
