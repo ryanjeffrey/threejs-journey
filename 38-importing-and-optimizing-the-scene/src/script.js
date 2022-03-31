@@ -50,7 +50,7 @@ gltfLoader.load(
     'portal.glb',
     (gltf) =>
     {
-        console.log(gltf.scene)
+        scene.add(gltf.scene)
     }
 )
 
