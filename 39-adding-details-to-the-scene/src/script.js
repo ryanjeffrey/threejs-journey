@@ -93,6 +93,9 @@ for(let i = 0; i < firefliesCount; i++)
 
 firefliesGeometry.setAttribute('position', new THREE.BufferAttribute(positionArray, 3))
 
+// Material
+const firefliesMaterial = new THREE.PointsMaterial({ size: 0.1, sizeAttenuation: true })
+
 /**
  * Sizes
  */
