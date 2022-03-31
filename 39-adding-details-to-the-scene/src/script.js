@@ -106,6 +106,8 @@ const firefliesMaterial = new THREE.ShaderMaterial({
     fragmentShader: firefliesFragmentShader
 })
 
+gui.add(firefliesMaterial.uniforms.uSize, 'value').min(0).max(500).step(1).name('firefliesSize')
+
 // Points
 const fireflies = new THREE.Points(firefliesGeometry, firefliesMaterial)
 scene.add(fireflies)
